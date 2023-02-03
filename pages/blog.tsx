@@ -4,25 +4,20 @@ import { Inter } from '@next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 // views
-import HomeIndex from '@/components/views/home/homeIndex'
+import BlogIndex from '@/components/views/blog/blogIndex'
 
 
-export default function Home() {
+export default function Blog() {
   return (
     <>
       <Head>
-        <title>AutoSick</title>
+        <title>AutoSick | Blog</title>
         <meta name="description" content="Connecting car owners to several channels of help." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-
-        {/* Open Graph */}
-
-        {/* Twitter Card */}
-
       </Head>
       <main className="h-auto w-screen">
-        <HomeIndex />
+        <BlogIndex />
       </main>
     </>
   )
