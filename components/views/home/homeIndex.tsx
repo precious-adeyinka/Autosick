@@ -21,7 +21,7 @@ const HomeIndex: React.FC<homeIndexPropsI> = ({}) => {
         <NavIndex showDrawer={shouldShowDrawer} updateDrawer={setShouldShowDrawer} />
 
         {/* Hero */}
-        <section id="hero" className="h-[30rem] w-full bg-gray-200 rounded-2xl my-10 heroBg flex items-center justify-center">
+        <section id="hero" className="h-[32rem] md:h-[30rem] w-full bg-gray-200 rounded-2xl my-10 heroBg flex items-center justify-center">
           <div className='h-60 w-10/12 flex flex-col items-center justify-center'>
             <h2 className='w-full text-5xl md:text-6xl text-white font-bold text-center'>Drive The Car You Want</h2>
             <p className='text-lg text-white font-normal text-center mt-3'>Connecting car owners to different channels of help</p>
@@ -42,7 +42,7 @@ const HomeIndex: React.FC<homeIndexPropsI> = ({}) => {
       </header>
 
       {/* About */}
-      <section id="about" className="h-auto md:h-[30rem] w-full md:w-10/12 mx-auto bg-gray-50 rounded-2xl my-32 flex flex-col md:flex-row items-center justify-center">
+      <section id="about" className="h-auto md:h-[30rem] w-full md:w-10/12 mx-auto bg-gray-50 rounded-2xl my-20 md:my-32 flex flex-col md:flex-row items-center justify-center">
         {/* Caption */}
         <div className='h-full w-full md:w-1/2 flex flex-col items-center md:items-start justify-center space-y-5 md:space-y-10 pt-20 md:pt-0 md:pl-20'>
           <h2 className='w-full text-4xl font-medium text-center md:text-left'>Who Are We?</h2>
