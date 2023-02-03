@@ -7,10 +7,10 @@ interface forumIndexPropsI {}
 
 const ForumIndex: React.FC<forumIndexPropsI> = ({}) => {
   return (
-    <div className='h-screen w-full bg-white px-16'>
+    <div className='h-screen w-full bg-white px-5 md:px-16'>
       {/* Nav Menu */}
       <NavIndex />
-      <h1 className='text-9xl font-medium text-center'>ForumIndex</h1>
+      <h1 className='text-xl font-medium text-center'>ForumIndex</h1>
     </div>
   )
 }
