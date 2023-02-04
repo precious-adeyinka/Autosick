@@ -4,8 +4,11 @@ import { useUser } from '@auth0/nextjs-auth0/client';
 
 const Profile = () => {
 	const { isLoading, user, error } = useUser();
-	if (isLoading) return <div>Loading...</div>;
 	const [showPopup, setShowPopup] = useState(false);
+
+	const updateRole = () => {};
+
+	if (isLoading) return <div>Loading...</div>;
 	return (
 		user && (
 			<>
@@ -50,7 +53,12 @@ const Profile = () => {
 								an expert
 							</div>
 
-							<button className='bg-sky-400 p-[5px]'>Done</button>
+							<button
+								className='bg-sky-400 p-[5px]'
+								onClick={updateRole}
+							>
+								Done
+							</button>
 						</div>
 					</section>
 				)}
