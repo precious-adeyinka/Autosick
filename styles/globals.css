@@ -132,6 +132,7 @@
     top: -10px;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
   }
   /* Visibility */
   @media (max-width: 768px) {

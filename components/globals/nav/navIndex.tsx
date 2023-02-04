@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect, SetStateAction } from 'react';
 
 // NEXT
+import { useUser } from '@auth0/nextjs-auth0/client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useUser } from '@auth0/nextjs-auth0/client';
+import { useRouter } from 'next/router';
+import LoginForm from './components/forms/loginForm';
+import RegisterForm from './components/forms/registerForm';
 
 interface navIndexProps {}
 
