@@ -117,6 +117,21 @@
   .heroBg {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../public/assets/images/hero-bg-5.jpg')!important;
   }
+  /* BLOG */
+  .blogCoverImg {
+    background-image: url('../public/assets/images/blogs/cover.jpg')!important;
+    background-position: center!important;
+    background-size: cover!important;
+    background-attachment: scroll!important;
+    background-repeat: no-repeat!important;
+  }
+  .blogSampleImg {
+    background-image: url('../public/assets/images/blogs/sample-image.jpg')!important;
+    background-position: center!important;
+    background-size: cover!important;
+    background-attachment: scroll!important;
+    background-repeat: no-repeat!important;
+  }
 
   /* Links */
   .activeLink {
