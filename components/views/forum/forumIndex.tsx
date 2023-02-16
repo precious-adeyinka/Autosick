@@ -248,7 +248,7 @@ const ForumIndex: React.FC<forumIndexPropsI> = ({}) => {
       {/* Dialogs */}
       { isCreatingThread ? (<ForumThreadDialog cb={toggleCreatingThread} />) : null }
     </div>
-  )
-}
+  );
+};
 
 export default ForumIndex;
