@@ -43,7 +43,7 @@ const ForumThreadDialog: React.FC<ForumThreadDialogI> = ({ cb }) => {
     return (
         <div className='h-screen w-full overflow-hidden bg-black/90 position fixed top-0 left-0 z-50 flex items-center justify-center'>
             {/* Board */}
-            <div className='h-[38rem] md:h-[35rem] w-11/12 md:w-1/2 bg-white rounded-2xl position relative px-5 md:px-10 py-10 overflow-x-hidden overflow-y-auto'>
+            <div className='h-full md:h-[35rem] w-full md:w-1/2 bg-white md:rounded-2xl position relative px-5 md:px-10 py-10 overflow-x-hidden overflow-y-auto'>
                 {/* close */}
                 <div 
                 onClick={toggleDialog}
