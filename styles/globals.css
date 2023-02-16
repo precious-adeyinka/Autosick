@@ -154,6 +154,17 @@
     .hideOnMobile {
       display: none!important;
     }
+    .hideOnDesktop {
+      display: flex!important;
+    }
+  }
+  @media (min-width: 768px) {
+    .hideOnMobile {
+      display: flex!important;
+    }
+    .hideOnDesktop {
+      display: none!important;
+    }
   }
 }
 

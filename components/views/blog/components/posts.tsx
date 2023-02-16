@@ -83,7 +83,7 @@ const BlogPosts: React.FC<blogPostsPropsI> = ({}) => {
   return (
         <section className='h-auto w-full flex flex-col items-center jusitfy-center pb-10 mt-10 md:mt-0'>
             {/* Featured Blog */}
-            <Link href={encodeURI(String((data[0].slug)))} className="h-auto w-full">
+            <Link href={`/post/${data[0].slug}`} className="h-auto w-full">
                 <div className='h-72 md:h-[30rem] w-full bg-gray-100 rounded-2xl flex items-end justify-center pb-0 overflow-hidden blogCoverImg'>
                     <div className='h-auto md:h-32 pb-5 md:pb-0 w-full bg-gradient-to-t from-black/90 to-bg-transparent fex flex-col items-center justify-start pl-8 md:pl-12'>
                         <h2 className='text-sm font-medium text-white'>{data[0].author.name} . {data[0].date}</h2>
@@ -103,11 +103,13 @@ const BlogPosts: React.FC<blogPostsPropsI> = ({}) => {
                             key={id}
                             className='h-auto w-full flex flex-col items-start justify-start'>
                                 {/* Image */}
-                                <div className='h-72 w-full rounded-2xl bg-gray-100 mb-4 blogSampleImg'></div>
+                                <Link href={`/post/${blog.slug}`} className='h-auto w-full'>
+                                    <div className='h-72 w-full rounded-2xl bg-gray-100 mb-4 blogSampleImg'></div>
+                                </Link>
                                 {/* Meta */}
                                 <h2 className='text-sm font-medium text-black'>{blog.author.name} . {blog.date}</h2>
                                 {/* Title */}
-                                <Link href="#">
+                                <Link href={`/post/${blog.slug}`} className='h-auto w-full'>
                                     <div className='h-auto w-full flex items-center justify-between'>
                                         <h1 className='w-full text-xl font-medium my-2 text-black'>{blog.title}</h1>
                                         <i className='la la-external-link-alt text-lg text-black'></i>
