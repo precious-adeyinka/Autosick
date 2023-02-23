@@ -44,7 +44,7 @@ const CommentBlock = () => {
                     {/* Number of likes */}
                     <div className='h-auto w-1/2 flex items-center justify-center space-x-1 cursor-pointer'>
                         <span className='font-normal text-md text-gray-500'>{likesCount}</span>
-                        <i className='la la-heart text-lg text-gray-300'></i>
+                        <i className={`transition duration-700 la la-heart text-lg ${likesCount > 0 ? 'text-red-500' : 'text-gray-300'}`}></i>
                     </div>
                 </div>
                 {/* Repy form */}
