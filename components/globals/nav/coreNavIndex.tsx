@@ -38,11 +38,11 @@ const CoreNavIndex: React.FC<navIndexProps> = ({showDrawer, updateDrawer}) => {
         {/* Logo */}
         <div className='flex items-center justify-start md:space-x-5'>
             {/* hamburger */}
-            <div className='hidden h-12 w-5 md:flex flex-col items-start justify-center space-y-1 cursor-pointer'>
+            {/* <div className='hidden h-12 w-5 md:flex flex-col items-start justify-center space-y-1 cursor-pointer'>
                 <span className='h-[2px] w-1/2 bg-gray-800 rounded-full'></span>
                 <span className='h-[2px] w-full bg-gray-800 rounded-full'></span>
                 <span className='h-[2px] w-3/5 bg-gray-800 rounded-full'></span>
-            </div>
+            </div> */}
             {/* logo */}
             <Link href="/">
                 <h1 className='text-lg font-medium group'>

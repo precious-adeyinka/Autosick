@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from 'react'
+// redux
+import { useSelector } from 'react-redux';
 
 // next
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router';
 
 //icons
 import { 
@@ -33,11 +36,17 @@ interface ContentI {
 }
 
 const CoreIndex = () => {
+    // router
+    const router = useRouter()
+
+    // store
+    const {isLoggedIn} = useSelector((state:any) => state.user)
+
     const [contents, setContents] = useState<ContentI[]>([
         {
             url_slug: new URL('https://www.google.com'),
             author_profile_slug: new URL('https://www.google.com'),
-            avatar_url: '/assets/images/cat.png',
+            avatar_url: '/assets/images/teams/default.jpg',
             cover_url: '/assets/images/hero-bg-3.jpg',
             content_title: 'When you are stuck in traffic 3 things you must do',
             author_name: 'Bryan Williams',
@@ -47,7 +56,7 @@ const CoreIndex = () => {
         {
             url_slug: new URL('https://www.google.com'),
             author_profile_slug: new URL('https://www.google.com'),
-            avatar_url: '/assets/images/cat.png',
+            avatar_url: '/assets/images/teams/default.jpg',
             cover_url: '/assets/images/hero-bg-3.jpg',
             content_title: 'When you are stuck in traffic 3 things you must do',
             author_name: 'Bryan Williams',
@@ -57,7 +66,7 @@ const CoreIndex = () => {
         {
             url_slug: new URL('https://www.google.com'),
             author_profile_slug: new URL('https://www.google.com'),
-            avatar_url: '/assets/images/cat.png',
+            avatar_url: '/assets/images/teams/default.jpg',
             cover_url: '/assets/images/hero-bg-3.jpg',
             content_title: 'When you are stuck in traffic 3 things you must do',
             author_name: 'Bryan Williams',
@@ -67,7 +76,7 @@ const CoreIndex = () => {
         {
             url_slug: new URL('https://www.google.com'),
             author_profile_slug: new URL('https://www.google.com'),
-            avatar_url: '/assets/images/cat.png',
+            avatar_url: '/assets/images/teams/default.jpg',
             cover_url: '/assets/images/hero-bg-3.jpg',
             content_title: 'When you are stuck in traffic 3 things you must do',
             author_name: 'Bryan Williams',
@@ -77,7 +86,7 @@ const CoreIndex = () => {
         {
             url_slug: new URL('https://www.google.com'),
             author_profile_slug: new URL('https://www.google.com'),
-            avatar_url: '/assets/images/cat.png',
+            avatar_url: '/assets/images/teams/default.jpg',
             cover_url: '/assets/images/hero-bg-3.jpg',
             content_title: 'When you are stuck in traffic 3 things you must do',
             author_name: 'Bryan Williams',
@@ -87,7 +96,7 @@ const CoreIndex = () => {
         {
             url_slug: new URL('https://www.google.com'),
             author_profile_slug: new URL('https://www.google.com'),
-            avatar_url: '/assets/images/cat.png',
+            avatar_url: '/assets/images/teams/default.jpg',
             cover_url: '/assets/images/hero-bg-3.jpg',
             content_title: 'When you are stuck in traffic 3 things you must do',
             author_name: 'Bryan Williams',
@@ -122,6 +131,15 @@ const CoreIndex = () => {
     const [ShowMenuPanel, setShowMenuPanel] = useState<boolean>(false);
     const toggleShowMenuPanel:React.MouseEventHandler<any> | undefined = () => setShowMenuPanel(prev => !prev)
 
+    const init = async () => {
+        await router?.push('/')
+    }
+
+    if (!isLoggedIn) {
+        console.log(router)
+        init()
+        return (<div className='h-screen w-full flex items-center justify-center font-medium text-2xl'>Loading...</div>)
+    }
     return (
         <div className='h-screen w-full bg-white overflow-hidden scroll-smooth transition duration-700'>
             {/* Nav Menu */}
